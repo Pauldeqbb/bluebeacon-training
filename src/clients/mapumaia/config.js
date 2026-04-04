@@ -54,11 +54,11 @@ const config = {
   },
 
   aiContext: `
-Mapu Maia provides kaupapa Māori mental health and addiction support services.
+Mapu Maia provides mental health and addiction support services.
 Services are delivered through a whānau-centred model, often involving multiple
 family members in the care planning process.
 
-The system (Tō Pikitanga) is built on Salesforce Nonprofit Cloud.
+The system (Salesforce) is built on Salesforce Nonprofit Cloud.
 Mapu Maia staff include kaiāwhina (support workers), clinicians, and administrators.
 
 Key Mapu Maia differences from other PGF services:
