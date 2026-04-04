@@ -10,7 +10,6 @@ export default function AITutor({ systemPrompt, config, onClose }) {
   const [input, setInput] = useState('')
   const [loading, setLoading] = useState(false)
   const endRef = useRef(null)
-  const apiKey = import.meta.env.VITE_ANTHROPIC_API_KEY
 
   const starters = config.tutorStarters || [
     "What's the difference between a top goal and an intermediate goal?",
@@ -28,26 +27,14 @@ export default function AITutor({ systemPrompt, config, onClose }) {
     setLoading(true)
     setTimeout(() => endRef.current?.scrollIntoView({ behavior: 'smooth' }), 50)
 
-    if (!apiKey) {
-      setMessages([...next, { role: 'assistant', content: 'No API key configured. Add VITE_ANTHROPIC_API_KEY to your environment variables.' }])
-      setLoading(false)
-      return
-    }
-
     try {
-      const res = await fetch('https://api.anthropic.com/v1/messages', {
+      const res = await fetch('/api/chat', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'x-api-key': apiKey, 'anthropic-version': '2023-06-01', 'anthropic-dangerous-direct-browser-access': 'true' },
-        body: JSON.stringify({
-          model: 'claude-sonnet-4-20250514',
-          max_tokens: 800,
-          system: systemPrompt,
-          messages: next,
-        }),
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ messages: next, systemPrompt }),
       })
       const data = await res.json()
-      const reply = data.content?.find(b => b.type === 'text')?.text
-        || 'Sorry, I couldn\'t respond right now. Please try again.'
+      const reply = data.reply || 'Sorry, I couldn\'t respond right now. Please try again.'
       setMessages([...next, { role: 'assistant', content: reply }])
     } catch {
       setMessages([...next, { role: 'assistant', content: 'Something went wrong connecting to the AI. Please try again.' }])
