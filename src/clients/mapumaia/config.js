@@ -37,7 +37,7 @@ const config = {
   slug: 'mapumaia',
   name: 'Mapu Maia',
   shortName: 'Mapu Maia',
-  systemName: 'Tō Pikitanga',
+  systemName: 'Salesforce',
 
   brand: {
     primary: '#1a4731',     // Mapu Maia deep green
