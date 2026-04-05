@@ -189,7 +189,7 @@ export const CARE_PLANS_MODULE = {
       duration: '15 mins',
       emoji: '✨',
       tagline: 'Apply the template and tailor it for the individual',
-      scribeUrl: null,   // e.g. 'https://scribehow.com/embed/Create_a_Care_Plan__xxxx'
+      scribeUrl: 'https://scribehow.com/embed/How_to_Preview_Treatment_Plan_Templates_in_Salesforce__Hj4TZgPxTTy55dFqqQLpnA',
       scribeTitle: 'Creating a care plan from a template for a client',
       summary: `Creating a care plan is a three-step flow launched from the client's session record. Step one: name the plan, set it to Draft, choose the template, and select the participant. Step two: review the pre-populated goals and services — deselect anything that doesn't apply or add extras for this client's specific needs. Step three: final review, set enrollees and dates for each element, then save.\n\nOnce saved, the care plan record opens with goal assignments, service assignments, and action plan tasks already in place and ready to work with.\n\nKeep the care plan in Draft until you've discussed and agreed it with the client, then move it to Active.`,
       concepts: [
