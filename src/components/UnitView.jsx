@@ -1,4 +1,5 @@
 import KnowledgeCheck from './KnowledgeCheck.jsx'
+import ScribeEmbed from './ScribeEmbed.jsx'
 
 const C = {
   navy: '#0f1f4b', border: '#e2e8f0', surf: '#f8fafc',
@@ -63,6 +64,9 @@ export default function UnitView({
             ))}
           </div>
         </div>
+
+        {/* Scribe walkthrough */}
+        <ScribeEmbed url={unit.scribeUrl} title={unit.scribeTitle} />
 
         {/* Key concepts */}
         {unit.concepts?.length > 0 && (

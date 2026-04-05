@@ -22,6 +22,8 @@ export const CARE_PLANS_MODULE = {
       duration: '5 mins',
       emoji: '🗺️',
       tagline: 'Understand the big picture before you dive in',
+      scribeUrl: null,   // e.g. 'https://scribehow.com/embed/Care_Plan_Overview__xxxx'
+      scribeTitle: 'Navigating to a care plan in Tō Pikitanga',
       summary: `Care plans are the central record for all active client work in the system. They bring together goals, services, tasks, and session notes — all connected to a single client record.\n\nBefore a care plan exists, a client will have already come through referral and intake. A session record is created automatically at the end of intake, and it's from that session that you create the care plan.\n\nCare plans are built on templates, which set out the most common goals and services for a given program type — saving time and keeping things consistent across your team.`,
       concepts: [
         { term: 'Care Plan', definition: 'The central working record — links a client\'s goals, services, tasks, and notes in one place' },
@@ -77,6 +79,8 @@ export const CARE_PLANS_MODULE = {
       duration: '20 mins',
       emoji: '🎯',
       tagline: 'Build the building blocks before you build the template',
+      scribeUrl: null,   // e.g. 'https://scribehow.com/embed/Create_Goal_Definitions__xxxx'
+      scribeTitle: 'Creating goal definitions and publishing an action plan template',
       summary: `Before creating a care plan template, you need its building blocks: goal definitions and action plan templates.\n\nGoal definitions describe what a client is working toward. There are two types — top goals (the big-picture outcome) and intermediate goals (smaller steps along the way). Intermediate goals always sit under a parent top goal.\n\nAction plan templates are reusable sets of tasks. Each task has a subject, a priority, a days-to-complete window, and an assignment rule. Once your tasks are in place, you must publish the action plan template before it can be linked to a care plan template.`,
       concepts: [
         { term: 'Goal Definition', definition: 'A reusable goal record (top or intermediate) that can be included in multiple care plan templates' },
@@ -128,6 +132,8 @@ export const CARE_PLANS_MODULE = {
       duration: '15 mins',
       emoji: '📋',
       tagline: 'The correct sequence saves you from starting over',
+      scribeUrl: null,   // e.g. 'https://scribehow.com/embed/Configure_Care_Plan_Template__xxxx'
+      scribeTitle: 'Setting up a care plan template from Draft to Published',
       summary: `With goal definitions and action plan templates ready, you can now build the care plan template itself — the reusable blueprint case workers apply when creating a care plan for a new client.\n\nThe sequence matters: create the template in Draft status first, add your goals and services, then publish it. Only after publishing can you add action plan templates. Goals and services can only be edited before publishing — once the template is live, those elements are locked.\n\nCreate a separate care plan template for each distinct service type or program scenario.`,
       concepts: [
         { term: 'Draft Status', definition: 'The required starting status — goals and services can only be added while the template is in Draft' },
@@ -183,6 +189,8 @@ export const CARE_PLANS_MODULE = {
       duration: '15 mins',
       emoji: '✨',
       tagline: 'Apply the template and tailor it for the individual',
+      scribeUrl: null,   // e.g. 'https://scribehow.com/embed/Create_a_Care_Plan__xxxx'
+      scribeTitle: 'Creating a care plan from a template for a client',
       summary: `Creating a care plan is a three-step flow launched from the client's session record. Step one: name the plan, set it to Draft, choose the template, and select the participant. Step two: review the pre-populated goals and services — deselect anything that doesn't apply or add extras for this client's specific needs. Step three: final review, set enrollees and dates for each element, then save.\n\nOnce saved, the care plan record opens with goal assignments, service assignments, and action plan tasks already in place and ready to work with.\n\nKeep the care plan in Draft until you've discussed and agreed it with the client, then move it to Active.`,
       concepts: [
         { term: 'Case Participant', definition: 'A person linked to a session record — must exist before they can be selected as a care plan participant' },
@@ -238,6 +246,8 @@ export const CARE_PLANS_MODULE = {
       duration: '20 mins',
       emoji: '✅',
       tagline: 'Day-to-day management and graceful closure',
+      scribeUrl: null,   // e.g. 'https://scribehow.com/embed/Manage_and_Close__xxxx'
+      scribeTitle: 'Updating tasks, recording interaction summaries, and closing a care plan',
       summary: `Once active, the care plan becomes the hub for all ongoing client work. Tasks appear in the Activity panel and can be marked complete from there, or updated in bulk using the Quick Update button — which shows all tasks and goal assignments in one place.\n\nInteraction Summaries are the structured note-taking tool — each one links automatically to the care plan, session, and person account record, giving a complete view across the system. They have built-in privacy controls so sensitive notes stay visible only to the right people.\n\nWhen the work is done — goals achieved, tasks complete, services delivered — close the care plan by changing its status to Completed on the Details tab. This formally ends active engagement without deleting any history.`,
       concepts: [
         { term: 'Quick Update', definition: 'A button on the care plan record that shows all tasks and goal assignments for bulk status updates in one place' },

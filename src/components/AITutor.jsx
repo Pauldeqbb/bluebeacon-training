@@ -10,7 +10,6 @@ export default function AITutor({ systemPrompt, config, onClose }) {
   const [input, setInput] = useState('')
   const [loading, setLoading] = useState(false)
   const endRef = useRef(null)
-
   const starters = config.tutorStarters || [
     "What's the difference between a top goal and an intermediate goal?",
     "Why must I publish an action plan template before linking it?",
