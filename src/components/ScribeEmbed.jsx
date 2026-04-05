@@ -47,7 +47,7 @@ export default function ScribeEmbed({ url, title }) {
       </div>
 
       {/* Scribe iframe */}
-      <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0 }}>
+      <div style={{ position: 'relative', paddingBottom: '100%', height: 0 }}>
         <iframe
           src={url}
           title={title || 'Step-by-step walkthrough'}
