@@ -14,6 +14,8 @@
 export const CARE_PLANS_MODULE = {
   id: 'care-plans',
   title: 'Care Plan Management',
+  emoji: '🩺',
+  totalDuration: '~75 mins',
   description: 'Set up templates, create care plans, and manage client progress from intake to closure.',
   units: [
     {

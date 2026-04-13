@@ -1,4 +1,5 @@
 import { CARE_PLANS_MODULE } from '../shared/modules/care-plans.js'
+import { COMING_SOON_MODULES } from '../shared/modules/coming-soon.js'
 
 const config = {
   slug: 'pgf',
@@ -47,8 +48,7 @@ adding tasks mid-program, and interaction summary privacy settings.
     "A participant isn't showing in the dropdown — what do I do?",
   ],
 
-  // Modules for this client — uses shared content directly
-  modules: [CARE_PLANS_MODULE],
+  modules: [CARE_PLANS_MODULE, ...COMING_SOON_MODULES],
 }
 
 export default config

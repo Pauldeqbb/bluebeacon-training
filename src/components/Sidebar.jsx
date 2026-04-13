@@ -1,4 +1,4 @@
-export default function Sidebar({ config, modules, activeUnit, completed, showTutor, onUnitSelect, onToggleTutor }) {
+export default function Sidebar({ config, modules, activeUnit, completed, showTutor, onUnitSelect, onToggleTutor, onHome }) {
   const { brand, systemName, shortName } = config
   const pct = Math.round((completed.size / modules.length) * 100)
 
@@ -9,6 +9,19 @@ export default function Sidebar({ config, modules, activeUnit, completed, showTu
     }}>
       {/* Brand */}
       <div style={{ padding: '18px 16px', borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
+        {/* Back to home */}
+        <button onClick={onHome} style={{
+          display: 'flex', alignItems: 'center', gap: 5,
+          background: 'none', border: 'none', cursor: 'pointer',
+          color: 'rgba(255,255,255,0.38)', fontSize: 11, padding: '0 0 12px',
+          fontFamily: 'inherit', transition: 'color 0.15s',
+        }}
+          onMouseEnter={e => e.currentTarget.style.color = 'rgba(255,255,255,0.7)'}
+          onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.38)'}
+        >
+          ← All modules
+        </button>
+
         <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 16 }}>
           <div style={{
             width: 34, height: 34, background: brand.accent, borderRadius: 10,

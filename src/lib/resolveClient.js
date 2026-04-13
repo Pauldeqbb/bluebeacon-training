@@ -20,16 +20,24 @@ export function resolveClient() {
   // Allow env var override (useful for per-subdomain Vercel deployments)
   const envClient = import.meta.env.VITE_CLIENT
   if (envClient && KNOWN_CLIENTS.includes(envClient)) {
-    return { slug: envClient, unitIndex: 0 }
+    return { slug: envClient, unitIndex: 0, showHome: false }
   }
 
   const parts = window.location.pathname.replace(/^\//, '').split('/')
   const slug = KNOWN_CLIENTS.includes(parts[0]) ? parts[0] : DEFAULT_CLIENT
-  const unitIndex = parseInt(parts[1] ?? '0', 10) || 0
 
-  return { slug, unitIndex }
+  // Show the home page when the URL is just /{slug} (no unit index)
+  const hasUnit = parts.length > 1 && parts[1] !== ''
+  const unitIndex = hasUnit ? (parseInt(parts[1], 10) || 0) : 0
+  const showHome = !hasUnit
+
+  return { slug, unitIndex, showHome }
 }
 
 export function buildUrl(slug, unitIndex) {
   return `/${slug}/${unitIndex}`
+}
+
+export function buildHomeUrl(slug) {
+  return `/${slug}`
 }

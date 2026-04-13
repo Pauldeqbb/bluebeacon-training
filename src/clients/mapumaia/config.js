@@ -1,4 +1,5 @@
 import { CARE_PLANS_MODULE } from '../shared/modules/care-plans.js'
+import { COMING_SOON_MODULES } from '../shared/modules/coming-soon.js'
 
 /**
  * Mapu Maia uses the same Salesforce Nonprofit Cloud platform
@@ -80,7 +81,7 @@ individual and whānau-level goals.
     "Why must I publish an action plan template before linking it?",
   ],
 
-  modules: [mapuMaiaCarePlansModule],
+  modules: [mapuMaiaCarePlansModule, ...COMING_SOON_MODULES],
 }
 
 export default config
